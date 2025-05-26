@@ -1,3 +1,13 @@
+## LimeLight Tools 
+With these toosl you can:
+1)  Set the LimeLight to provide the image source for the drivers station "camera stream" during Init
+2)  Use port forwarding through control hub to access the limelight configuration tool remotely.
+3)  If using Ftc Dash Board, this will stream the limelight camera to dashboard
+   
+See the comments in the following files located in the team directory on how to use these tools
+- SensorLimelight3ATest.java	provides an example of setting up the limelight and using the tools class to display images on drivers station and dashboard
+- LimeLightImageTools.java	the class of tools for getting images from the limelight
+
 ## NOTICE
 
 This repository contains the public FTC SDK for the INTO THE DEEP (2024-2025) competition season.
