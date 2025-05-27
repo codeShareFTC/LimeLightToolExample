@@ -13,7 +13,9 @@ Like these tools?  Have questions or suggestions?  Want more helpful tools
 Please email us at codeshareftc@gmail.com
 See our github at https://github.com/orgs/codeShareFTC/repositories
 
-## NOTICE
+
+
+## NOTICE - Below here from the FTC SDK readme
 
 This repository contains the public FTC SDK for the INTO THE DEEP (2024-2025) competition season.
 
