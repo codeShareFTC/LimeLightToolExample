@@ -1,34 +1,22 @@
 /*
-Copyright (c) 2024 Limelight Vision
+Disclaimer - intended for development only.  Not recommended for competition or official events
+Using the port forwarding for configuration or streaming to dashboard may use significant
+bandwidth and cause problems with robots in a dense competition setting.
 
-All rights reserved.
+We do think that the setDriverStationStreamSource() method utilizes minimal bandwidth, sending
+single snapshots as intended by the drivers station app and FTC SDK. Its use may be appropriate
+at event venues.
 
-Redistribution and use in source and binary forms, with or without modification,
-are permitted (subject to the limitations in the disclaimer below) provided that
-the following conditions are met:
-
-Redistributions of source code must retain the above copyright notice, this list
-of conditions and the following disclaimer.
-
-Redistributions in binary form must reproduce the above copyright notice, this
-list of conditions and the following disclaimer in the documentation and/or
-other materials provided with the distribution.
-
-Neither the name of FIRST nor the names of its contributors may be used to
-endorse or promote products derived from this software without specific prior
-written permission.
-
-NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY'S PATENT RIGHTS ARE GRANTED BY THIS
-LICENSE. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
-THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE
-FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
-TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+Following is from any email with Danny Diaz, FTC Senior Engineering Manager
+"With that in mind, we do have an important request regarding the use of this particular tool at
+official FTC events. Due to the very limited and critical nature of Wi-Fi bandwidth at our events,
+tools that place a significant burden on the network can unfortunately impact the overall event
+experience for everyone. Therefore, we would greatly appreciate it if you could prominently
+include a statement in your repository explicitly advising users that this tool should absolutely
+not be used at official FTC events. This includes the competition area, pit area, and practice
+fields. It's crucial to emphasize that using such a tool at an event is forbidden due to the
+potential strain on the event's network infrastructure. This is a policy we maintain across the
+board, and it's the same reason we don't allow streaming to the Driver Station."
 */
 package org.firstinspires.ftc.teamcode;
 
@@ -44,9 +32,9 @@ import com.qualcomm.robotcore.util.RobotLog;
 /**
  * This OpMode illustrates how to use the LimelightImageTools
  */
-@TeleOp(name = "Sensor: Limelight3A", group = "Sensor")
+@TeleOp(name = "LL Tools Test", group = "Sensor")
 //@Disabled
-public class SensorLimelight3ATest extends LinearOpMode {
+public class LimeLightToolsTest extends LinearOpMode {
 
 
     @Override
@@ -81,10 +69,11 @@ public class SensorLimelight3ATest extends LinearOpMode {
         // http://192.168.43.1:5800/  - displays raw image before processing
         // http://192.168.43.1:5801/  - opens the limelight configuration tool!
         // http://192.168.43.1:5802/  - display the processed
-        // This is probably NOT legal in competition?
+        // This is NOT legal in competition?
         llIt.forwardAll();
 
         // If using Ftc Dash Board, this will stream the limelight camera to dashboard
+        // dashboard is not legal in competition and discourages at events due to bandwidth
         FtcDashboard.getInstance().startCameraStream(llIt.getStreamSource(),10);
 
         waitForStart();
