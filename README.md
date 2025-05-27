@@ -1,5 +1,5 @@
 ## LimeLight Tools 
-With these toosl you can:
+With these tools you can:
 1)  Set the LimeLight to provide the image source for the drivers station "camera stream" during Init
 2)  Use port forwarding through control hub to access the limelight configuration tool remotely.
 3)  If using Ftc Dash Board, this will stream the limelight camera to dashboard
